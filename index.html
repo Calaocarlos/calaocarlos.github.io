@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encrictador de texto</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1><img class="principal" src="imagenes/fa40536b096745509625e94b1eff37f8-removebg-preview.png" alt="logo de Encrictador"></h1>
+    </header>
+    <main>
+        <div>
+            <textarea name="" id="area" cols="70" rows="10" style="display: none;"></textarea>
+            <input id="inputField" onclick="indentificador()" type="text" required placeholder="Ingrese el texto aqui">
+        </div>
+        
+        <div class="rectangulo">
+            <div id="conjunto">
+                <img class="img-informativa" src="imagenes/82330186-el-personaje-en-3d-está-confundido-porque-hay-un-montón-de-papeles-en-el-piso-aislado-en-blanco-removebg-preview.png" alt="personaje confundido">  
+                <p class="tex-informacion">Ningún mensaje fue encontrado</p>
+                <p class="tex-informacion2">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+
+            <div>
+                <textarea name="" id="area2" cols="70" rows="10" style="display: none;"></textarea>
+            </div>
+
+            <div>
+                <button id="duplicado" onclick="copiarTexto()">Copiar</button>
+            </div>
+            
+        </div>
+
+        <div>
+            <img class="alerta" src="imagenes/1268-removebg-preview.png" alt="exclamacion">
+            <p class="terminal">Solo letras minúsculas y sin acentos</p>
+        </div>
+
+        <div>
+            <button id="boton1" onclick="convertirTexto()" class="dinamicas1">Encriptar</button>
+            <button id="boton2" onclick="devolverTexto()" class="dinamicas2">Desencriptar</button>
+        </div>
+
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
