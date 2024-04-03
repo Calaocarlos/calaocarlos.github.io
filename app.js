@@ -5,7 +5,8 @@
     const duplicado = document.getElementById('duplicado');
     const conjunto = document.getElementById('conjunto');
     var textoOriginal = ""; // Variable global para almacenar el texto original
-
+    var linkedinLink = document.getElementById('linkedin-link');  // Obtén el elemento del enlace de LinkedIn
+    var githublink = document.getElementById('lin-github');  // Obtén el elemento del enlace de github
 
 // Agregar un event listener al campo de entrada
 inputField.addEventListener('click', function() {
@@ -27,13 +28,17 @@ inputField.addEventListener('click', function() {
 
     // Verificar si el input está vacío o contiene letras mayúsculas o acentos
     if (area === '' || /[A-ZÁÉÍÓÚÀÈÌÒÙÄËÏÖÜ,.{}]/.test(area)) {
+        document.getElementById('conjunto3').style.display = 'block'; // Mostrar el parrafo
+        document.getElementById('conjunto2').style.display = 'block'; // Mostrar el parrafo
         document.getElementById('conjunto').style.display = 'block'; // Mostrar la imagen
         document.getElementById('area').style.display = 'none'; // Ocultar el 1er textarea
         document.getElementById('area2').style.display = 'none'; // Ocultar el 2do textarea
         document.getElementById('inputField').style.display = 'block'; // Mostrar el input
         document.getElementById('duplicado').style.display = 'none'; // Ocultar boton copiar
     } else {
-        document.getElementById('conjunto').style.display = 'none'; // Mostrar la imagen
+        document.getElementById('conjunto3').style.display = 'none'; // Ocultar el parrafo
+        document.getElementById('conjunto2').style.display = 'none'; // Ocultar el parrafo
+        document.getElementById('conjunto').style.display = 'none'; // Ocultar la imagen
         document.getElementById('area').style.display = 'block'; // Mostrar texarea1
         document.getElementById('area2').style.display = 'block'; // Mostrar textarea2
         document.getElementById('duplicado').style.display = 'block'; // Mostrar boton copiar
@@ -85,6 +90,25 @@ inputField.addEventListener('click', function() {
         document.execCommand("copy");
     
     }
+
+        
+      // Agrega un evento de clic al enlace de LinkedIn
+      linkedinLink.addEventListener('click', function(event) {
+          // Redirige al usuario a tu perfil de LinkedIn
+          window.open('https://www.linkedin.com/in/carlos-alberto-calao-lizcano-730414302/', 'blank');
+          
+          // Evita el comportamiento predeterminado del enlace
+          event.preventDefault();
+      });
     
+       // Agrega un evento de clic al enlace de github
+       githublink.addEventListener('click', function(event) {
+        // Redirige al usuario a tu perfil de github
+        window.open('https://github.com/Calaocarlos', 'blank');
+        
+        // Evita el comportamiento predeterminado del enlace
+        event.preventDefault();
+    });
+  
     
     
